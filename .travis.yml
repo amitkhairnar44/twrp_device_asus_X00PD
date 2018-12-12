@@ -21,6 +21,7 @@ script:
   - |
     docker run --rm -i -v "$(pwd):/root/twrp/:rw,z" surendrajat/twrp-builder bash << EOF
     cd /root/twrp/
+    export ALLOW_MISSING_DEPENDENCIES=true
     source build/envsetup.sh && lunch omni_X00P-eng && make -j16 recoveryimage
     exit
     EOF
