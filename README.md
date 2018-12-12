@@ -1,5 +1,7 @@
 # Device configuration for Asus Zenfone Max M1
 
+[![Build Status](https://travis-ci.org/amitkhairnar44/twrp_device_asus_X00PD.svg?branch=test1)](https://travis-ci.org/amitkhairnar44/twrp_device_asus_X00PD)
+
 ## Spec Sheet
 
 | Feature                 | Specification                     |
