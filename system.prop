@@ -1,0 +1,4 @@
+ro.build.product=msm8937_64
+ro.product.device=ASUS_X00P_4
+ro.product.name=X00PD
+ro.build.asus.sku=WW

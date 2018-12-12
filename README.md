@@ -1,4 +1,4 @@
-# Common device configuration for Asus Zenfone Max M1
+# Device configuration for Asus Zenfone Max M1
 
 ## Spec Sheet
 
