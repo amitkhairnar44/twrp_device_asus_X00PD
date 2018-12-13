@@ -23,7 +23,7 @@ script:
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/X00P/recovery.img $HOME/twrp/TWRP-$version-XOOP-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/X00P/recovery.img $HOME/twrp/TWRP-$version-X00P-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
