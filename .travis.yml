@@ -11,14 +11,9 @@ before_script:
   - git config --global color.ui false 
   - repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1
   - repo sync
-  #- wget -q https://github.com/TwrpBuilder/twrp-sources/releases/download/omni_twrp-5.1.1-cleaned/omni_twrp-5.1.1_cleaned.tar.xz
-  #  -O $HOME/twrp.tar.xz
-  #- tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
   - cd $HOME/twrp/ && git clone https://github.com/amitkhairnar44/twrp_device_asus_X00PD.git -b test1 device/asus/X00P/
   - git clone https://github.com/TeamWin/android_device_qcom_common.git -b android-8.0 device/qcom/common
-  #- git clone https://github.com/raza231198/bionic_libc_zoneinfo.git bionic/libc/zoneinfo
-  #- git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery --depth=1
   - |
     docker run --rm -i -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) -v "$(pwd):/home/twrp/:rw,z" yshalsager/lineageos:14.1 bash << EOF
     cd /home/twrp/
@@ -34,12 +29,12 @@ deploy:
   skip_cleanup: true
   provider: releases
   api_key: "$GITHUB_TOKEN"
-  #file_glob: true
+  file_glob: true
   file: $HOME/twrp/*.img
   on:
-    tags: true
-    #repo: TwrpBuilder/android_device_freetel_ftj161a
-    #branch: master
-#branches:
-  #except:
-    #- /^(?i:untagged)-.*$/
+    tags: false
+    repo: amitkhairnar44/twrp_device_asus_X00PD
+    branch: master
+branches:
+  except:
+    - /^(?i:untagged)-.*$/
