@@ -34,7 +34,7 @@ deploy:
   on:
     tags: false
     repo: amitkhairnar44/twrp_device_asus_X00PD
-    branch: master
+    branch: test1
 branches:
   except:
     - /^(?i:untagged)-.*$/
