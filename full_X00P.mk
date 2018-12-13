@@ -14,5 +14,24 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_X00P-userdebug
-add_lunch_combo omni_X00P-eng
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Encryption
+PRODUCT_PACKAGES += \
+    libcryptfs_hw
+
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/kernel:kernel
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := X00P
+PRODUCT_NAME := full_X00P
+PRODUCT_BRAND := Asus
+PRODUCT_MODEL := Asus_X00PD
+PRODUCT_MANUFACTURER := Asus
