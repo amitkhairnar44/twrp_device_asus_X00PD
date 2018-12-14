@@ -31,10 +31,10 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
 	wait /dev/block/platform/soc/${ro.boot.bootdevice}
-    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice 
 
 on property:ro.crypto.state=encrypted
-    start /sbin/qseecomd
+    start sbinqseecomd
 
 # Separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
 service sbinqseecomd /sbin/qseecomd
