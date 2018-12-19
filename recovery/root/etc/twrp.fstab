@@ -15,7 +15,7 @@
 #
 
 /boot             emmc    /dev/block/bootdevice/by-name/boot          flags=backup=1;display="Boot"
-/data             ext4    /dev/block/bootdevice/by-name/userdata      flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
+/data             ext4    /dev/block/bootdevice/by-name/userdata      flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;encryptable=footer;
 /system           ext4    /dev/block/bootdevice/by-name/system        flags=backup=1;canbewiped;wipeingui;display="System"
 /cache            ext4    /dev/block/bootdevice/by-name/cache         flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset;display="Cache"
 /misc             emmc    /dev/block/bootdevice/by-name/misc          flags=backup=0;display="Misc"
