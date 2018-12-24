@@ -25,8 +25,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-on early-init
-    mkdir /firmware 0771 system system
 	
 on init
     chmod 0660 /dev/qseecom
@@ -38,7 +36,6 @@ on fs
 	wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice 
 	install_keyring
-    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower uid=1000 gid=1000 dmask=227 fmask=337
     setprop crypto.ready 1
 
 # Separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
