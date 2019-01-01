@@ -80,6 +80,8 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_FBE := true
+TW_TARGET_USES_QCOM_BSP := true
 TW__CRYPTO_USE_SYSTEM_VOLD := qseecomd
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
@@ -90,7 +92,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
