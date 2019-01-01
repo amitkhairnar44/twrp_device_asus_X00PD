@@ -24,10 +24,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-<<<<<<< HEAD
-=======
-
->>>>>>> d9479d22afdf1a7ac5912281b585a2f27f5e16ba
 	
 on init
     symlink /system/etc /etc
