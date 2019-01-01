@@ -81,7 +81,6 @@ TW_EXTRA_LANGUAGES := true
 TW_THEME := portrait_hdpi
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
-TW_TARGET_USES_QCOM_BSP := true
 TW__CRYPTO_USE_SYSTEM_VOLD := qseecomd
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
